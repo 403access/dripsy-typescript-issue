@@ -1,6 +1,6 @@
-import { DripsyProvider, makeTheme } from "dripsy";
+import { DripsyProvider, Text, makeTheme } from "dripsy";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 const theme = makeTheme({});
 
@@ -8,8 +8,14 @@ export default function App() {
   return (
     <DripsyProvider theme={theme}>
       <View style={styles.container}>
-        <Text>Open up App.tsx to start working on your app!</Text>
-        <StatusBar style="auto" />
+        <Text
+          sx={{
+            fontSize: [14, 16, 20], // 14 on mobile, 16 on tablet, 20 on desktop
+            color: ["$primary", null, "accent"], // `primary` on mobile & tablet, `accent` on desktop
+          }}
+        >
+          Responsive font size?? 🤯
+        </Text>
       </View>
     </DripsyProvider>
   );
