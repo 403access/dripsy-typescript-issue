@@ -2,7 +2,13 @@ import { DripsyProvider, Text, makeTheme } from "dripsy";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 
-const theme = makeTheme({});
+const theme = makeTheme({
+  colors: {
+    $text: '#000',
+    $background: '#fff',
+    $primary: '#07c',
+  },
+});
 
 export default function App() {
   return (
@@ -11,8 +17,8 @@ export default function App() {
         <Text
           sx={{
             fontSize: [14, 16, 20], // 14 on mobile, 16 on tablet, 20 on desktop
-            // color: ["$primary", null, "accent"], // `primary` on mobile & tablet, `accent` on desktop,
-            color: ["red"],
+            color: ["$primary", null, "accent"], // `primary` on mobile & tablet, `accent` on desktop,
+            // color: ["red"],
           }}
         >
           Responsive font size?? 🤯
