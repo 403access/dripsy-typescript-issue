@@ -11,7 +11,8 @@ export default function App() {
         <Text
           sx={{
             fontSize: [14, 16, 20], // 14 on mobile, 16 on tablet, 20 on desktop
-            color: ["$primary", null, "accent"], // `primary` on mobile & tablet, `accent` on desktop
+            // color: ["$primary", null, "accent"], // `primary` on mobile & tablet, `accent` on desktop,
+            color: ["red"],
           }}
         >
           Responsive font size?? 🤯
